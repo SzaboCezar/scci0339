@@ -95,4 +95,26 @@ class EmployeeMockTest {
             assertEquals(targetFunction, employee.getFunction());
         }
     }
+
+    @Test
+    void invalid_filterEmployeesByDidacticFunction() {
+        EmployeeMock empMock = new EmployeeMock();
+        Employee emp1 = new Employee("Ion", "Pop", "5432424242222", DidacticFunction.ASISTENT, 5000d);
+        Employee emp2 = new Employee("Maria", "Ionescu", "5432424243333", DidacticFunction.TEACHER, 7000d);
+        Employee emp3 = new Employee("Andrei", "Mihai", "5432424244444", DidacticFunction.LECTURER, 6000d);
+        empMock.addEmployee(emp1);
+        empMock.addEmployee(emp2);
+        empMock.addEmployee(emp3);
+
+        DidacticFunction targetFunction = DidacticFunction.valueOf("Test");
+
+        List<Employee> filteredEmployees = empMock.getEmployeeList().stream()
+                .filter(employee -> employee.getFunction()== targetFunction)
+                .collect(Collectors.toList());
+
+        for (Employee employee : filteredEmployees) {
+            System.out.println(employee);
+            assertEquals(targetFunction, employee.getFunction());
+        }
+    }
 }
