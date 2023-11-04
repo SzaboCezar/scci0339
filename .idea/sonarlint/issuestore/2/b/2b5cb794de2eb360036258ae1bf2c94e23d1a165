@@ -1,0 +1,6 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(μ ΅°ώÿÿÿÿ
+q
+java:S1128"ORemove this unused import 'AngajatiApp.repository.EmployeeRepositoryInterface'.(ΈώƒΫύÿÿÿÿ8†ν΅•µ1
+R
+java:S1068"0Remove this unused "employeeView" private field.(ίγο¤ωÿÿÿÿ8ζΙ…µ1
